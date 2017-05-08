@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+
+set user [exec whoami]
+set param [lindex $argv 0]
+set pwd [lindex $argv 1]
+
+spawn sudo apt-get install $param
+set timeout 2
+expect "\[sudo\] password for $user: "
+set timeout 2
+send "$pwd\r"
+set timeout 3
+expect "Do you want to continue? \[Y\/n\] "
+send "Y\r"
+set timeout 100
+expect "\[sudo\] password for $user: "
+set timeout 2
+send "$pwd\r"
+interact
