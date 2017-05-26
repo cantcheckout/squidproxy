@@ -1,2 +1,0 @@
-# squidproxy
-~upload code~
