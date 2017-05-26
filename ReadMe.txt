@@ -1,6 +1,7 @@
 Pre-requisite:
 1. Install expect
    $ sudo apt-get install expect
+   $ sudo apt install squid
    
 Run the program
 1. Launch Terminal
